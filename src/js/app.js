@@ -62,7 +62,7 @@ const isCartEmpty = function() {
             <span class="text-Dark-grayish-blue text-[14px]">$125.00 x ${productNumber} <span class="text-Very-dark-blue font-semibold">$${(125.00 * productNumber).toFixed(2)}</span></span>
           </div>
           <button class="w-8 h-8 grid place-items-center">
-            <img src="/src/assets/images/icon-delete.svg" alt="delete" data-delete-btn>
+            <img src="src/assets/images/icon-delete.svg" alt="delete" data-delete-btn>
           </button>
         </div>
         <button class="h-[56px] rounded-lg bg-primary flex items-center justify-center gap-3 w-full" data-add-to-cart-btn>
