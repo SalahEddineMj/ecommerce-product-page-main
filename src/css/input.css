@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --primary: 26deg 100% 55%;
+    --on-primary: 26deg 100% 55%; 
+    --primary-light: 25deg 100% 94%;
+    --Very-dark-blue: 220deg 13% 13%;
+    --background: 223deg 64% 98%;
+    --Dark-grayish-blue: 219deg 9% 45%;
+    --Grayish-blue: 220deg 14% 75%;
+    --White: 0deg 0% 100%;
+    --modal-background: 0deg 0% 0%;
+  }
+}
+@layer components {
+    .has-scrollbar::-webkit-scrollbar {
+    height: 10px;
+  }
+  .has-scrollbar::-webkit-scrollbar-track {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    outline: 2px solid hsl(26, 100%, 55%);
+  }
+  .has-scrollbar::-webkit-scrollbar-thumb {
+    background-color: hsl(26, 100%, 55%);
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 20px;
+  }
+  .has-scrollbar::-webkit-scrollbar-button { width: calc(25% - 40px); }
+}

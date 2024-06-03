@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/public/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="/src/js/app.js" defer></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body class="bg-background font-kumbh">
+  <header class="fixed top-0 left-0 w-full z-20 bg-white h-[80px] border-b-[1px] border-Gray-30">
+    <div class="container mx-auto px-4 h-full flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <button class="grid place-items-center md:hidden" data-nav-toggler>
+          <img src="/src/assets/images/icon-menu.svg" alt="open menu">
+        </button>
+        <a href="/" class="h-[24px]">
+          <img src="/src/assets/images/logo.svg" alt="logo">
+        </a>
+        <ul class="md:flex hidden items-center gap-8 ml-16">
+          <li class="relative before:duration-150 before:absolute before:w-full before:h-[2px] hover:before:bg-primary before:-bottom-7 before:left-0">
+            <a href="/men" class="text-Dark-grayish-blue duration-150 hover:text-Very-dark-blue">Men</a>
+          </li>
+          <li class="relative before:duration-150 before:absolute before:w-full before:h-[2px] hover:before:bg-primary before:-bottom-7 before:left-0">
+            <a href="/women" class="text-Dark-grayish-blue duration-150 hover:text-Very-dark-blue">Women</a>
+          </li>
+          <li class="relative before:duration-150 before:absolute before:w-full before:h-[2px] hover:before:bg-primary before:-bottom-7 before:left-0">
+            <a href="/about" class="text-Dark-grayish-blue duration-150 hover:text-Very-dark-blue">About</a>
+          </li>
+          <li class="relative before:duration-150 before:absolute before:w-full before:h-[2px] hover:before:bg-primary before:-bottom-7 before:left-0">
+            <a href="/contact" class="text-Dark-grayish-blue duration-150 hover:text-Very-dark-blue">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-5">
+        <button class="relative" data-cart-btn>
+          <span class="absolute text-[11px] font-semibold -top-2 -right-1 text-white bg-primary rounded-full px-[6px] py-[1px]" data-cart-quantity>0</span>
+          <img src="/src/assets/images/icon-cart.svg" alt="cart icon">
+          <div class="bg-white">
+          </div>
+        </button>
+        <button data-user-btn>
+          <img class="duration-150 hover:ring-2 ring-primary rounded-full" src="/src/assets/images/image-avatar.png" alt="user avatar" width="30" height="30">
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="fixed w-full max-w-80 left-0 top-0 bg-white z-40 h-screen p-6 duration-300 -translate-x-full" data-sidebar>
+    <button class="p-3" data-nav-toggler>
+      <img src="/src/assets/images/icon-close.svg" alt="close menu">
+    </button>
+    <ul class="grid gap-6 mt-10">
+      <li>
+        <a href="/men" class="text-Very-dark-blue font-semibold">Men</a>
+      </li>
+      <li>
+        <a href="/women" class="text-Very-dark-blue font-semibold">Women</a>
+      </li>
+      <li>
+        <a href="/about" class="text-Very-dark-blue font-semibold">About</a>
+      </li>
+      <li>
+        <a href="/contact" class="text-Very-dark-blue font-semibold">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="fixed w-full h-full bg-modal-background/75 z-30 left-0 top-0 duration-300 hidden" data-nav-toggler data-sidebar-overlay></div>
+  <section class="pt-20 md:pt-40 ">
+    <div class="container mx-auto md:px-4 md:flex md:items-center md:gap-10 md:justify-between lg:gap-24 xl:gap-44">
+      <div>
+        <div class="relative" data-slider-container>
+          <button class="absolute top-1/2 left-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10" data-prev-btn>
+            <img src="/src/assets/images/icon-previous.svg" alt="previous button">
+          </button>
+          <button class="absolute top-1/2 right-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10" data-next-btn>
+            <img src="/src/assets/images/icon-next.svg" alt="previous button">
+          </button>
+          <ul class="has-scrollbar snap-inline-mandatory flex items-center gap-3 overflow-x-auto overflow-y-auto pb-5 mb-6 md:w-[350px]" data-slider-list>
+            <li class="snap-start h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden">
+              <img class="min-w-full h-full object-cover" src="/src/assets/images/image-product-1.jpg" alt="product-1">
+            </li>
+            <li class="snap-start h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden">
+              <img class="min-w-full h-full object-cover" src="/src/assets/images/image-product-2.jpg" alt="product-2">
+            </li>
+            <li class="snap-start h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden">
+              <img class="min-w-full h-full object-cover" src="/src/assets/images/image-product-3.jpg" alt="product-3">
+            </li>
+            <li class="snap-start h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden">
+              <img class="min-w-full h-full object-cover" src="/src/assets/images/image-product-4.jpg" alt="product-4">
+            </li>
+          </ul>
+        </div>
+        <ul class="md:flex hidden items-center gap-3 md:justify-center">
+          <li class="cursor-pointer overflow-hidden w-16 h-16 rounded-md focus:ring-2 ring-primary duration-300 relative before:duration-300 before:absolute before:inset-0 before:z-10 hover:before:bg-primary-light/70 focus:before:bg-primary-light/70" tabindex="0">
+            <img class="w-full h-full object-cover" src="/src/assets/images/image-product-1-thumbnail.jpg" alt="product-1">
+          </li>
+          <li class="cursor-pointer overflow-hidden w-16 h-16 rounded-md focus:ring-2 ring-primary duration-300 relative before:duration-300 before:absolute before:inset-0 before:z-10 hover:before:bg-primary-light/70 focus:before:bg-primary-light/70" tabindex="1">
+            <img class="w-full h-full object-cover" src="/src/assets/images/image-product-2-thumbnail.jpg" alt="product-2">
+          </li>
+          <li class="cursor-pointer overflow-hidden w-16 h-16 rounded-md focus:ring-2 ring-primary duration-300 relative before:duration-300 before:absolute before:inset-0 before:z-10 hover:before:bg-primary-light/70 focus:before:bg-primary-light/70" tabindex="3">
+            <img class="w-full h-full object-cover" src="/src/assets/images/image-product-3-thumbnail.jpg" alt="product-3">
+          </li>
+          <li class="cursor-pointer overflow-hidden w-16 h-16 rounded-md focus:ring-2 ring-primary duration-300 relative before:duration-300 before:absolute before:inset-0 before:z-10 hover:before:bg-primary-light/70 focus:before:bg-primary-light/70" tabindex="4">
+            <img class="w-full h-full object-cover" src="/src/assets/images/image-product-4-thumbnail.jpg" alt="product-4">
+          </li>
+        </ul>
+      </div>
+      <div class="px-4">
+        <h4 class="text-Dark-grayish-blue uppercase tracking-widest">Sneaker Company</h4>
+        <h1 class="text-Very-dark-blue font-bold text-4xl mt-2 mb-4">Fall Limited Edition Sneakers</h1>
+        <p class="text-Dark-grayish-blue">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="flex items-center gap-4 mt-5 mb-10 md:block">
+          <div class="flex items-center gap-4 md:mb-4">
+            <span class="font-bold text-4xl">$125.00</span>
+            <span class="rounded-md bg-black text-white font-semibold py-[3px] px-2">50%</span>
+          </div>
+          <span class="font-bold text-Dark-grayish-blue line-through grow text-right text-xl">$250.00</span>
+        </div>
+        <div class="md:flex items-center gap-3">
+          <div class="flex items-center justify-between px-4 h-[56px] bg-Grayish-blue/20 rounded-lg mb-4 md:mb-0 md:basis-2/3 lg:basis-1/2">
+            <button class="p-3 duration-150 hover:opacity-70" data-action-btn="false">
+              <img src="/src/assets/images/icon-minus.svg" alt="decrement">
+            </button>
+            <span class="font-bold" data-quantity>0</span>
+            <button class="p-3 duration-150 hover:opacity-70" data-action-btn="true">
+              <img src="/src/assets/images/icon-plus.svg" alt="increment">
+            </button>
+          </div>
+          <button class="h-[56px] rounded-lg bg-primary flex items-center justify-center gap-3 w-full mb-14 md:mb-0 shadow-xl shadow-primary/40 duration-200 hover:bg-primary/50 hover:shadow-none active:bg-primary/50 active:shadow-none" data-add-to-cart-btn>
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#000000" fill-rule="nonzero"/>
+            </svg>
+            <span class="font-bold">Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="fixed scale-0 flex duration-300 w-custom-calc flex-col bg-white top-[88px] max-w-[500px] min-h-60 left-1/2 -translate-x-1/2 rounded-md z-20 shadow-lg shadow-black/20" data-cart>
+  </div>
+  <!-- Collections
+  Men
+  Women
+  About
+  Contact
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
