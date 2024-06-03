@@ -56,7 +56,7 @@ const isCartEmpty = function() {
       <h5 class="px-6 font-semibold py-4 border-b-[1px] border-Gray-30 text-Very-dark-blue">Cart</h5>
       <div class="flex flex-col gap-6 px-6 py-4">
         <div class="flex items-center justify-between gap-3">
-          <img class="w-16 h-16 rounded-md" src="/src/assets/images/image-product-1-thumbnail.jpg" alt="product">
+          <img class="w-16 h-16 rounded-md" src="src/assets/images/image-product-1-thumbnail.jpg" alt="product">
           <div>
             <p class="text-Dark-grayish-blue text-[14px]">Fall Limited Edition Sneakers</p>
             <span class="text-Dark-grayish-blue text-[14px]">$125.00 x ${productNumber} <span class="text-Very-dark-blue font-semibold">$${(125.00 * productNumber).toFixed(2)}</span></span>
