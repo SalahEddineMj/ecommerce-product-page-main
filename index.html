@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="public/output.css">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="src/js/app.js" defer></script>
+  <script src="public/swiper-bundle.min.js" defer></script>
+  <script src="src/js/app.js" defer type="module"></script>
+  <link rel="stylesheet" href="public/swiper-bundle.min.css">
+  <link rel="stylesheet" href="public/output.css">
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -78,28 +79,29 @@
   <section class="pt-20 md:pt-40 ">
     <div class="container mx-auto md:px-4 md:flex md:items-center md:gap-10 md:justify-between lg:gap-24 xl:gap-44">
       <div>
-        <div class="relative" data-slider-container>
-          <button class="absolute top-1/2 left-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10" data-prev-btn>
+        <div class="relative swiper">
+          <button class="absolute top-1/2 left-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 swiper-button-prev">
             <img src="src/assets/images/icon-previous.svg" alt="previous button">
           </button>
-          <button class="absolute top-1/2 right-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10" data-next-btn>
+          <button class="absolute top-1/2 right-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 swiper-button-next">
             <img src="src/assets/images/icon-next.svg" alt="previous button">
           </button>
-          <ul class="has-scrollbar snap-inline-mandatory flex items-center gap-3 overflow-x-auto overflow-y-auto pb-5 mb-6 md:w-[350px]" data-slider-list>
-            <li class="snap-start h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden">
+          <ul class="pb-5 md:w-[350px] swiper-wrapper">
+            <li class="h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden swiper-slide">
               <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-1.jpg" alt="product-1">
             </li>
-            <li class="snap-start h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden">
+            <li class="h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden swiper-slide">
               <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-2.jpg" alt="product-2">
             </li>
-            <li class="snap-start h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden">
+            <li class="h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden swiper-slide">
               <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-3.jpg" alt="product-3">
             </li>
-            <li class="snap-start h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden">
+            <li class="h-[330px] min-w-full md:h-auto md:rounded-xl overflow-hidden swiper-slide">
               <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-4.jpg" alt="product-4">
             </li>
           </ul>
         </div>
+        <div class="swiper-scrollbar mb-5"></div>
         <ul class="md:flex hidden items-center gap-3 md:justify-center">
           <li class="cursor-pointer overflow-hidden w-16 h-16 rounded-md focus:ring-2 ring-primary duration-300 relative before:duration-300 before:absolute before:inset-0 before:z-10 hover:before:bg-primary-light/70 focus:before:bg-primary-light/70" tabindex="0">
             <img class="w-full h-full object-cover" src="src/assets/images/image-product-1-thumbnail.jpg" alt="product-1">

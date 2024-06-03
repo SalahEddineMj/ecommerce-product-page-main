@@ -7,6 +7,11 @@ const actionBtn = document.querySelectorAll('[data-action-btn]');
 const quantity = document.querySelector('[data-quantity]');
 const cartQuantity = document.querySelector('[data-cart-quantity]');
 const addToCartBtn = document.querySelector('[data-add-to-cart-btn]');
+const sliderNextBtn = document.querySelector('[data-next-btn]')
+const sliderPrevBtn = document.querySelector('[data-prev-btn]');
+const sliderContainer = document.querySelector('[data-slider-container]')
+const slider = document.querySelector('[data-slider]');
+let currentSliderPos = 0;
 navbarTogglers.forEach((ele) => {
   ele.addEventListener('click', function() {
     sidebar.classList.toggle('translate-x-0');
@@ -82,3 +87,21 @@ const isCartEmpty = function() {
   }
 }
 isCartEmpty();
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  grabCursor: true,
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
