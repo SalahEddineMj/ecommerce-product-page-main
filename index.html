@@ -22,7 +22,7 @@
   <header class="fixed top-0 left-0 w-full z-20 bg-white h-[80px] border-b-[1px] border-Gray-30">
     <div class="container mx-auto px-4 h-full flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <button class="grid place-items-center md:hidden" data-nav-toggler>
+        <button class="grid place-items-center md:hidden" data-sidebar-toggler>
           <img src="src/assets/images/icon-menu.svg" alt="open menu">
         </button>
         <a href="/" class="h-[24px]">
@@ -44,11 +44,9 @@
         </ul>
       </div>
       <div class="flex items-center gap-5">
-        <button class="relative" data-cart-btn>
-          <span class="absolute text-[11px] font-semibold -top-2 -right-1 text-white bg-primary rounded-full px-[6px] py-[1px]" data-cart-quantity>0</span>
+        <button class="relative" data-cart-toggler>
+          <span class="absolute duration-150 text-[11px] font-semibold -top-2 -right-1 text-white bg-primary rounded-full px-[6px] py-[1px] scale-0" data-cart-quantity>0</span>
           <img src="src/assets/images/icon-cart.svg" alt="cart icon">
-          <div class="bg-white">
-          </div>
         </button>
         <button data-user-btn>
           <img class="duration-150 hover:ring-2 ring-primary rounded-full" src="src/assets/images/image-avatar.png" alt="user avatar" width="30" height="30">
@@ -56,8 +54,8 @@
       </div>
     </div>
   </header>
-  <div class="fixed w-full max-w-80 left-0 top-0 bg-white z-40 h-screen p-6 duration-300 -translate-x-full" data-sidebar>
-    <button class="p-3" data-nav-toggler>
+  <div class="fixed w-full max-w-80 left-0 top-0 bg-white z-50 h-screen p-6 duration-300 -translate-x-full" data-sidebar>
+    <button class="p-3" data-sidebar-toggler>
       <img src="src/assets/images/icon-close.svg" alt="close menu">
     </button>
     <ul class="grid gap-6 mt-10">
@@ -75,7 +73,7 @@
       </li>
     </ul>
   </div>
-  <div class="fixed w-full h-full bg-modal-background/75 z-30 left-0 top-0 duration-300 hidden" data-nav-toggler data-sidebar-overlay></div>
+  <div class="fixed w-full h-full bg-modal-background/75 z-40 left-0 top-0 duration-300 hidden" data-sidebar-toggler data-sidebar-overlay></div>
   <section class="pt-20 md:pt-40 ">
     <div class="container mx-auto md:px-4 md:flex md:items-center md:gap-10 md:justify-between lg:gap-24 xl:gap-44">
       <div>
@@ -101,7 +99,8 @@
             </li>
           </ul>
         </div>
-        <div class="swiper-scrollbar mb-5"></div>
+        <div class="swiper-scrollbar mb-5
+        "></div>
         <ul class="md:flex hidden items-center gap-3 md:justify-center">
           <li class="cursor-pointer overflow-hidden w-16 h-16 rounded-md focus:ring-2 ring-primary duration-300 relative before:duration-300 before:absolute before:inset-0 before:z-10 hover:before:bg-primary-light/70 focus:before:bg-primary-light/70" tabindex="0">
             <img class="w-full h-full object-cover" src="src/assets/images/image-product-1-thumbnail.jpg" alt="product-1">
@@ -151,8 +150,9 @@
       </div>
     </div>
   </section>
-  <div class="fixed scale-0 flex duration-300 w-custom-calc flex-col bg-white top-[88px] max-w-[500px] min-h-60 left-1/2 -translate-x-1/2 rounded-md z-20 shadow-lg shadow-black/20" data-cart>
+  <div class="fixed scale-0 flex duration-300 w-custom-calc flex-col bg-white top-[88px] max-w-[500px] min-h-60 left-1/2 -translate-x-1/2 rounded-md z-30 shadow-lg shadow-black/20" data-cart>
   </div>
+  <div class="fixed bg-transparent w-full h-full z-20 left-0 top-0 duration-300 scale-0" data-cart-toggler data-cart-overlay></div>
   <!-- Collections
   Men
   Women

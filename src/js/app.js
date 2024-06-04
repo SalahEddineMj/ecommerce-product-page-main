@@ -1,25 +1,24 @@
-const navbarTogglers = document.querySelectorAll('[data-nav-toggler]');
+const navbarTogglers = document.querySelectorAll('[data-sidebar-toggler]');
 const sidebar = document.querySelector('[data-sidebar]');
 const overlay = document.querySelector('[data-sidebar-overlay]');
-const cartBtn = document.querySelector('[data-cart-btn]');
+const cartTogglers = document.querySelectorAll('[data-cart-toggler]');
 const cart = document.querySelector('[data-cart]');
 const actionBtn = document.querySelectorAll('[data-action-btn]');
 const quantity = document.querySelector('[data-quantity]');
 const cartQuantity = document.querySelector('[data-cart-quantity]');
 const addToCartBtn = document.querySelector('[data-add-to-cart-btn]');
-const sliderNextBtn = document.querySelector('[data-next-btn]')
-const sliderPrevBtn = document.querySelector('[data-prev-btn]');
-const sliderContainer = document.querySelector('[data-slider-container]')
-const slider = document.querySelector('[data-slider]');
-let currentSliderPos = 0;
+const cartOverlay = document.querySelector('[data-cart-overlay]')
 navbarTogglers.forEach((ele) => {
   ele.addEventListener('click', function() {
     sidebar.classList.toggle('translate-x-0');
     overlay.classList.toggle('hidden');
   })
 });
-cartBtn.addEventListener('click', function() {
-  cart.classList.toggle('scale-0');
+cartTogglers.forEach((ele) => {
+  ele.addEventListener('click', function() {
+    cart.classList.toggle('scale-0');
+    cartOverlay.classList.toggle('scale-0');
+  })
 })
 
 actionBtn.forEach((ele) => {
@@ -41,7 +40,9 @@ actionBtn.forEach((ele) => {
     }
   })
 })
-
+addToCartBtn.addEventListener('click', function() {
+  Number(quantity.textContent) > 0 ? cartQuantity.classList.remove('scale-0') : cartQuantity.classList.add('scale-0');
+})
 addToCartBtn.addEventListener('click', function() {
   cartQuantity.textContent = quantity.textContent;
   isCartEmpty();
@@ -81,7 +82,7 @@ const isCartEmpty = function() {
       <h5 class="px-6 font-semibold py-4 border-b-[1px] border-Gray-30 text-Very-dark-blue">Cart</h5>
       <h5 class="w-full grow flex items-center justify-center font-semibold text-Dark-grayish-blue">Your cart is empty</h5>
       `
-      cartQuantity.textContent = 0;
+      cartQuantity.classList.add('scale-0');
       quantity.textContent = 0;
     })
   }
@@ -93,9 +94,6 @@ const swiper = new Swiper('.swiper', {
   grabCursor: true,
   slidesPerView: 'auto',
   spaceBetween: 16,
-
-
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
