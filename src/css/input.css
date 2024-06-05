@@ -32,3 +32,10 @@
 .swiper-button-next::after {
   content: none;
 }
+.swiper-slide-thumb-active {
+  transition: 100ms;
+  border: 3px solid hsl(26, 100%, 55%);
+}
+.swiper-slide-thumb-active::before {
+  background-color: hsla(0deg 0% 100% / 0.75);
+}
