@@ -9,6 +9,8 @@ const cartQuantity = document.querySelector("[data-cart-quantity]");
 const addToCartBtn = document.querySelector("[data-add-to-cart-btn]");
 const cartOverlay = document.querySelector("[data-cart-overlay]");
 const slider = document.querySelector('[data-slider]');
+const modal = document.querySelector('[data-modal]');
+const modalOverlay = document.querySelector('[data-modal-overlay]');
 
 navbarTogglers.forEach((ele) => {
   ele.addEventListener("click", function () {
@@ -134,6 +136,29 @@ let swiperModal = new Swiper(".modal-main", {
   },
 });
 
-slider.onclick = function() {
-  console.log("done");
+const Modal = function() {
+  const open = function() {
+    modal.classList.remove('invisible'),
+    modal.classList.remove('opacity-0');
+    modal.classList.remove('-translate-y-2/3');
+    modal.classList.add('-translate-y-1/2');
+    modalOverlay.classList.remove('scale-0');
+  }
+  const close = function() {
+    modal.classList.add('invisible'),
+    modal.classList.add('opacity-0');
+    modal.classList.add('-translate-y-2/3');
+    modal.classList.remove('-translate-y-1/2');
+    modalOverlay.classList.add('scale-0');
+  }
+  let closeBtn = document.querySelector('[data-close-btn]');
+  closeBtn.addEventListener('click', function() {
+    close();
+  })
+  return { open }
 }
+
+slider.addEventListener('click', function() {
+  const modal = Modal();
+  modal.open();
+})
