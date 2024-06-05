@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="public/swiper-bundle.min.css">
   <link rel="stylesheet" href="public/output.css">
+  <script src="public/scrollreveal.min.js" defer></script>
   <script src="public/swiper-bundle.min.js" defer></script>
   <script src="src/js/app.js" defer type="module"></script>
   <title>Frontend Mentor | E-commerce product page</title>
@@ -18,8 +19,8 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
 </head>
-<body class="bg-background font-kumbh">
-  <header class="fixed top-0 left-0 w-full z-20 bg-white h-[80px] border-b-[1px] border-Gray-30">
+<body class="bg-background font-kumbh overflow-hidden">
+  <header class="fixed top-0 left-0 w-full z-20 bg-white h-[80px] border-b-[1px] border-Gray-30 reveal-top">
     <div class="container mx-auto px-4 h-full flex items-center justify-between">
       <div class="flex items-center gap-3">
         <button class="grid place-items-center md:hidden" data-sidebar-toggler>
@@ -77,7 +78,7 @@
   <section class="pt-20 md:pt-40 ">
     <div class="container mx-auto md:px-4 md:flex md:items-center md:gap-10 md:justify-between lg:gap-24 xl:gap-44">
       <div>
-        <div data-slider>
+        <div class="reveal-left" data-slider>
           <div class="relative swiper main md:w-[350px] h-[390px] pb-5">
             <button class="absolute top-1/2 left-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 swiper-button-prev md:hidden">
               <img src="src/assets/images/icon-previous.svg" alt="previous button">
@@ -101,8 +102,8 @@
             </ul>
           </div>
         </div>
-        <div class="swiper-scrollbar mb-5"></div>
-        <div class="max-md:hidden swiper secondary max-w-[350px] h-20">
+        <div class="swiper-scrollbar mb-5 reveal-deep"></div>
+        <div class="max-md:hidden swiper secondary max-w-[350px] h-20 reveal-bottom">
           <ul class="swiper-wrapper">
             <li class="cursor-pointer overflow-hidden rounded-md duration-300 relative before:duration-300 before:absolute before:inset-0 before:z-10 hover:before:bg-primary-light/70 swiper-slide" tabindex="0">
               <img class="w-full h-full object-cover" src="src/assets/images/image-product-1-thumbnail.jpg" alt="product-1">
@@ -119,7 +120,7 @@
           </ul>
         </div>
       </div>
-      <div class="px-4">
+      <div class="px-4 reveal-right">
         <h4 class="text-Dark-grayish-blue uppercase tracking-widest">Sneaker Company</h4>
         <h1 class="text-Very-dark-blue font-bold text-4xl mt-2 mb-4">Fall Limited Edition Sneakers</h1>
         <p class="text-Dark-grayish-blue">
@@ -166,7 +167,7 @@
       </svg>
     </button>
     <div class="relative swiper modal-main md:w-[420px] h-[430px] pb-5">
-      <button class="absolute top-1/2 left-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 swiper-button-prev">
+      <button class="absolute top-1/2 left-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 group swiper-button-prev">
         <img src="src/assets/images/icon-previous.svg" alt="previous button">
       </button>
       <button class="absolute top-1/2 right-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 swiper-button-next">
@@ -207,7 +208,7 @@
       </ul>
     </div>
   </div>
-  <div class="scale-0 fixed w-full h-full bg-modal-background/75 z-40 left-0 top-0 duration-300 max-md:hidden" data-modal-overlay></div>
+  <div class="scale-0 opacity-0 fixed w-full h-full bg-modal-background/75 z-40 left-0 top-0 duration-300 max-md:hidden" data-modal-overlay></div>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

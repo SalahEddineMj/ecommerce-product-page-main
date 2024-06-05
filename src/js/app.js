@@ -143,6 +143,7 @@ const Modal = function() {
     modal.classList.remove('-translate-y-2/3');
     modal.classList.add('-translate-y-1/2');
     modalOverlay.classList.remove('scale-0');
+    modalOverlay.classList.remove('opacity-0');
   }
   const close = function() {
     modal.classList.add('invisible'),
@@ -150,6 +151,7 @@ const Modal = function() {
     modal.classList.add('-translate-y-2/3');
     modal.classList.remove('-translate-y-1/2');
     modalOverlay.classList.add('scale-0');
+    modalOverlay.classList.add('opacity-0');
   }
   let closeBtn = document.querySelector('[data-close-btn]');
   closeBtn.addEventListener('click', function() {
@@ -162,3 +164,10 @@ slider.addEventListener('click', function() {
   const modal = Modal();
   modal.open();
 })
+
+const scrollReveal =  ScrollReveal();
+scrollReveal.reveal('.reveal-top', { origin: 'top', distance: '80px', duration: 1200});
+scrollReveal.reveal('.reveal-left', { origin: 'left', distance: '80px', duration: 1000, delay: 300 });
+scrollReveal.reveal('.reveal-right', { origin: 'right', distance: '80px', duration: 1000, delay: 300 });
+scrollReveal.reveal('.reveal-bottom', { origin: 'bottom', distance: '80px', duration: 1000, delay: 600 });
+scrollReveal.reveal('.reveal-deep', {scale: 0, distance: '0', duration: 600, delay: 1100 });
