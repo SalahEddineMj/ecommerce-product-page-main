@@ -166,8 +166,8 @@ slider.addEventListener('click', function() {
 })
 
 const scrollReveal =  ScrollReveal();
-scrollReveal.reveal('.reveal-top', { origin: 'top', distance: '80px', duration: 1200});
-scrollReveal.reveal('.reveal-left', { origin: 'left', distance: '80px', duration: 1000, delay: 300 });
-scrollReveal.reveal('.reveal-right', { origin: 'right', distance: '80px', duration: 1000, delay: 300 });
-scrollReveal.reveal('.reveal-bottom', { origin: 'bottom', distance: '80px', duration: 1000, delay: 600 });
-scrollReveal.reveal('.reveal-deep', {scale: 0, distance: '0', duration: 600, delay: 1100 });
+scrollReveal.reveal('.reveal-top', { origin: 'top', distance: '80px', duration: 1200, mobile: true });
+scrollReveal.reveal('.reveal-left', { origin: 'left', distance: '80px', duration: 1000, delay: 300, mobile: true  });
+scrollReveal.reveal('.reveal-right', { origin: 'right', distance: '80px', duration: 1000, delay: 300, mobile: true  });
+scrollReveal.reveal('.reveal-bottom', { origin: 'bottom', distance: '80px', duration: 1000, delay: 600, mobile: true  });
+scrollReveal.reveal('.reveal-deep', { scale: 0, distance: '0', duration: 600, delay: 1100 });
