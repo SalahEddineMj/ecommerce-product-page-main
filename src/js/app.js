@@ -11,6 +11,13 @@ const cartOverlay = document.querySelector("[data-cart-overlay]");
 const slider = document.querySelector('[data-slider]');
 const modal = document.querySelector('[data-modal]');
 const modalOverlay = document.querySelector('[data-modal-overlay]');
+const preloader = document.querySelector('[data-preloader]');
+const circle = document.querySelector('[data-circle]');
+
+window.addEventListener('load', function() {
+  preloader.classList.add('opacity-0', 'invisible');
+  circle.classList.add('animate-none');
+})
 
 navbarTogglers.forEach((ele) => {
   ele.addEventListener("click", function () {
