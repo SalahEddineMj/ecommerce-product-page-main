@@ -1335,6 +1335,10 @@ video {
 }
 
 @media not all and (min-width: 768px) {
+  .max-md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .max-md\:hidden {
     display: none;
   }
@@ -1347,6 +1351,11 @@ video {
 
   .md\:right-20 {
     right: 5rem;
+  }
+
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .md\:mb-0 {
@@ -1375,6 +1384,11 @@ video {
 
   .md\:w-\[420px\] {
     width: 420px;
+  }
+
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .md\:basis-2\/3 {
