@@ -1342,6 +1342,10 @@ video {
   .max-md\:hidden {
     display: none;
   }
+
+  .max-md\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
