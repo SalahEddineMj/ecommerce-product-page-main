@@ -39,3 +39,15 @@
 .swiper-slide-thumb-active::before {
   background-color: hsla(0deg 0% 100% / 0.75);
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(26, 100%, 55%);
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 20px;
+}

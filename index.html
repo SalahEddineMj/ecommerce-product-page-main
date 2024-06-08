@@ -2,22 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <!--
+    - primary meta tags
+  -->
+  <title>Frontend Mentor | E-commerce product page</title>
+  <meta name="title" content="Frontend Mentor | E-commerce product page">
+  <meta name="description" content="Shop the Fall Limited Edition Sneakers - the perfect casual wear companion. Featuring durable rubber soles and sleek design, these sneakers offer both style and comfort. Available now at a special discount!">
+  <!--
+  - favicon 
+  -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <!--
+    - google font link
+  -->
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!--
+    - custom css link
+  -->
   <link rel="stylesheet" href="public/swiper-bundle.min.css">
+  <!--
+    - custom js link
+  -->
   <script src="public/scrollreveal.min.js" defer></script>
+  <!--
+    - custom css link
+  -->
   <link rel="stylesheet" href="public/output.css">
+  <!--
+    - custom js links
+  -->
   <script src="public/swiper-bundle.min.js" defer></script>
   <script src="src/js/app.js" defer type="module"></script>
-  <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
+  <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
+  </style>
 </head>
 <body class="bg-background font-kumbh overflow-x-hidden">
   <div class="fixed left-0 top-0 w-full h-full grid place-items-center z-[60] bg-primary" data-preloader>
@@ -169,27 +190,29 @@
         <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" />
       </svg>
     </button>
-    <div class="relative swiper modal-main md:w-[420px] h-[430px] pb-5">
-      <button class="absolute top-1/2 left-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 group swiper-button-prev">
+    <div class="relative">
+      <button class="absolute top-1/2 -left-6 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 group swiper-button-prev">
         <img src="src/assets/images/icon-previous.svg" alt="previous button">
       </button>
-      <button class="absolute top-1/2 right-4 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 swiper-button-next">
+      <button class="absolute top-1/2 -right-6 w-12 h-12 rounded-full bg-white grid place-items-center -translate-y-1/2 z-10 swiper-button-next">
         <img src="src/assets/images/icon-next.svg" alt="previous button">
       </button>
-      <ul class="swiper-wrapper">
-        <li class="md:rounded-xl overflow-hidden swiper-slide">
-          <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-1.jpg" alt="product-1">
-        </li>
-        <li class="md:rounded-xl overflow-hidden swiper-slide">
-          <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-2.jpg" alt="product-2">
-        </li>
-        <li class="md:rounded-xl overflow-hidden swiper-slide">
-          <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-3.jpg" alt="product-3">
-        </li>
-        <li class=" md:rounded-xl overflow-hidden swiper-slide">
-          <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-4.jpg" alt="product-4">
-        </li>
-      </ul>
+      <div class="swiper modal-main md:w-[420px] h-[430px] pb-5">
+        <ul class="swiper-wrapper">
+          <li class="md:rounded-xl overflow-hidden swiper-slide">
+            <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-1.jpg" alt="product-1">
+          </li>
+          <li class="md:rounded-xl overflow-hidden swiper-slide">
+            <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-2.jpg" alt="product-2">
+          </li>
+          <li class="md:rounded-xl overflow-hidden swiper-slide">
+            <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-3.jpg" alt="product-3">
+          </li>
+          <li class=" md:rounded-xl overflow-hidden swiper-slide">
+            <img class="min-w-full h-full object-cover" src="src/assets/images/image-product-4.jpg" alt="product-4">
+          </li>
+        </ul>
+      </div>
     </div>
     <!--
       - SUB MODAL SLIDER
@@ -212,9 +235,9 @@
     </div>
   </div>
   <div class="scale-0 opacity-0 fixed w-full h-full bg-modal-background/75 z-40 left-0 top-0 duration-300 max-md:hidden" data-modal-overlay></div>
-  <!-- <div class="attribution">
+  <div class=" md:ps-80 w-fit mx-auto attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    Coded by <a href="#">Salah Eddine Mj</a>.
+  </div>
 </body>
 </html>
